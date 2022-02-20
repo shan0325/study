@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+//InheritanceType.SINGLE_TABLE 일 경우 기본으로 DTYPE 추가됨
+//기본적으로는 InheritanceType.JOINED를 사용하지만 단순한 경우 InheritanceType.SINGLE_TABLE 선택
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "dtype")
 @Getter @Setter
