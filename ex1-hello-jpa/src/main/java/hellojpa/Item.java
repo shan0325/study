@@ -3,7 +3,7 @@ package hellojpa;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) //InheritanceType.SINGLE_TABLE 일 경우 기본으로 DTYPE 추가됨
+@Inheritance(strategy = InheritanceType.JOINED) //InheritanceType.SINGLE_TABLE 일 경우 기본으로 DTYPE 추가됨
 @DiscriminatorColumn
 public abstract class Item {
 
