@@ -69,3 +69,22 @@ _ 잘 설계한 ORM 애플리케이션은 매핑한 테이블의 수보다 클�
 - 일대다 관계를 위한 엔티티를 만들고, 여기에서 값 타입을 사용
 - 영속성 전이(Cascade) + 고아 객체 제거를 사용해서 값 타입 컬렉션 처럼 사용
 - EX) AddressEntity
+
+### 임베디드 타입과 @MappedSuperclass 차이
+- https://www.inflearn.com/questions/18578
+- CreatedDate, UpdatedDate 둘을 합쳐서 하나의 임베디드 타입으로 정의하는 것과 @MappedSuperclass로 정의하는 것의 차이
+- 결국 상속을 사용하는 것과 위임을 사용하는 것의 차이 입니다.
+객체지향의 일반적인 법칙을 따르면 상속보다는 위임이 더 좋기 때문에 위임을 사용하겠지만, 이 경우는 상속을 사용하는게 더욱 편리합니다.
+임베디드 타입으로 만들면 예를 들어서 다음과 같이 만들게 됩니다.
+    ```
+    class TraceDate {
+      TYPE createdDate;
+      TYPE updatedDate;
+    }
+    ```
+- 이런 경우 JPQL 쿼리를 하려면 다음과 같이 항상 traceDate라는 식으로 임베디드 타입을 적어주어야 합니다.
+select m from Member m where m.traceDate.createdDate > ?
+상속을 사용하면 다음과 같이 간단하고 쉽게 풀립니다.
+select m from Member m where m.createdDate > ?
+결국 둘중 선택이기는 합니다만, 편리함과 직관성 때문에, 저는 이 경우 상속을 사용합니다^^
+감사합니다.
