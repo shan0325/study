@@ -17,6 +17,7 @@ public class Team {
     @Column(name = "team_id")
     private Long id;
     private String name;
+    private String etc;
 
     @OneToMany(mappedBy = "team")
     private List<Member> members = new ArrayList<>();
