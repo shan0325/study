@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
 @Entity
 public class Member extends BaseEntity {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private Long id;
     private String name;
     private Integer age;
-
 
 
     public Long getId() {

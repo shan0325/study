@@ -10,7 +10,7 @@ public class Main {
     public String solution(String str) {
         List<String> list = new ArrayList<>();
         for (char c : str.toCharArray()) {
-            if(!list.contains(String.valueOf(c))) {
+            if (!list.contains(String.valueOf(c))) {
                 list.add(String.valueOf(c));
             }
         }
@@ -20,7 +20,7 @@ public class Main {
     public String solution2(String str) {
         String answer = "";
         for (int i = 0; i < str.length(); i++) {
-            if(str.indexOf(str.charAt(i)) ==  i) {
+            if (str.indexOf(str.charAt(i)) == i) {
                 answer += str.charAt(i);
             }
         }

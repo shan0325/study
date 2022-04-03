@@ -27,9 +27,9 @@ public class JpaMain {
             findMember.setName("HelloJPA");*/
 
             List<Member> result = em.createQuery("select m from Member as m", Member.class)
-                                    .setFirstResult(0)
-                                    .setMaxResults(8)
-                                    .getResultList();
+                    .setFirstResult(0)
+                    .setMaxResults(8)
+                    .getResultList();
 
             for (Member m : result) {
                 System.out.println("member : " + m.getName());

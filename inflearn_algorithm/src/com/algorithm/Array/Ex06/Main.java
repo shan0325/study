@@ -9,18 +9,18 @@ public class Main {
     public List<Integer> solution(int n, int[] nums) {
         List<Integer> list = new ArrayList<>();
 
-        for (int i = 0; i < n ; i++) {
+        for (int i = 0; i < n; i++) {
             int num = Integer.parseInt(new StringBuilder(nums[i] + "").reverse().toString());
-            if(num == 1) continue;
+            if (num == 1) continue;
 
             int count = 0;
             for (int j = 2; j <= num / 2; j++) {
-                if(num % j == 0) {
+                if (num % j == 0) {
                     count++;
                     break;
                 }
             }
-            if(count == 0) list.add(num);
+            if (count == 0) list.add(num);
         }
         return list;
     }
@@ -28,7 +28,7 @@ public class Main {
     public List<Integer> solution2(int n, int[] nums) {
         List<Integer> list = new ArrayList<>();
 
-        for (int i = 0; i < n ; i++) {
+        for (int i = 0; i < n; i++) {
             int tmp = nums[i];
             int num = 0;
             while (tmp > 0) {
@@ -36,16 +36,16 @@ public class Main {
                 num = num * 10 + t;
                 tmp = tmp / 10;
             }
-            if(num == 1) continue;
+            if (num == 1) continue;
 
             int count = 0;
             for (int j = 2; j <= num / 2; j++) {
-                if(num % j == 0) {
+                if (num % j == 0) {
                     count++;
                     break;
                 }
             }
-            if(count == 0) list.add(num);
+            if (count == 0) list.add(num);
         }
         return list;
     }

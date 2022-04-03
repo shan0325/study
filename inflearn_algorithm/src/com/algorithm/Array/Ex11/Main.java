@@ -13,7 +13,7 @@ public class Main {
             for (int j = 0; j < arr[i].length; j++) {
                 int target = arr[i][j];
                 for (int k = 0; k < n; k++) {
-                    if(i != k && !tempArr[k] && target == arr[k][j]) {
+                    if (i != k && !tempArr[k] && target == arr[k][j]) {
                         temp++;
                         tempArr[k] = true;
                     }
@@ -24,7 +24,7 @@ public class Main {
 
         int temp = 0;
         for (int i = 0; i < n; i++) {
-            if(temp < members[i]) {
+            if (temp < members[i]) {
                 answer = i;
                 temp = members[i];
             }
@@ -40,13 +40,13 @@ public class Main {
             int cnt = 0;
             for (int j = 0; j < n; j++) {
                 for (int k = 0; k < 5; k++) {
-                    if(arr[i][k] == arr[j][k]) {
+                    if (arr[i][k] == arr[j][k]) {
                         cnt++;
                         break;
                     }
                 }
             }
-            if(cnt > max) {
+            if (cnt > max) {
                 max = cnt;
                 answer = i + 1;
             }

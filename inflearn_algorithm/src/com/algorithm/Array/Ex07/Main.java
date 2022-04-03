@@ -9,7 +9,7 @@ public class Main {
         int temp = 0;
 
         for (int i = 0; i < n; i++) {
-            if(nums[i] == 1) {
+            if (nums[i] == 1) {
                 temp++;
             } else {
                 temp = 0;

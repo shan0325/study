@@ -11,13 +11,13 @@ import javax.persistence.EntityManager;
 
 /**
  * 총 주문 2개
- *
+ * <p>
  * * userA
- *  JPA1 BOOK
- *  JPA2 BOOK
+ * JPA1 BOOK
+ * JPA2 BOOK
  * * userB
- *  SPRING1 BOOK
- *  SPRING2 BOOK
+ * SPRING1 BOOK
+ * SPRING2 BOOK
  */
 @Component
 @RequiredArgsConstructor
@@ -30,12 +30,12 @@ public class InitDb {
         initService.dbInit1();
         initService.dbInit2();
     }
-    
+
     @Component
     @Transactional
     @RequiredArgsConstructor
     static class InitService {
-        
+
         private final EntityManager em;
 
         public void dbInit1() {
@@ -95,7 +95,7 @@ public class InitDb {
             em.persist(order);
         }
     }
-    
+
 }
 
 

@@ -8,7 +8,7 @@ public class Main {
         int answer = 1;
         int temp = arr[0];
         for (int i = 1; i < arr.length; i++) {
-            if(temp < arr[i]) {
+            if (temp < arr[i]) {
                 answer++;
                 temp = arr[i];
             }

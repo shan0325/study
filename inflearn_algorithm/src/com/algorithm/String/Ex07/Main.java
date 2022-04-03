@@ -7,7 +7,7 @@ public class Main {
         String answer = "No";
 
         String reverseStr = new StringBuilder(str).reverse().toString();
-        if(str.equalsIgnoreCase(reverseStr)) {
+        if (str.equalsIgnoreCase(reverseStr)) {
             answer = "YES";
         }
         return answer;
@@ -15,7 +15,7 @@ public class Main {
 
     public String solution2(String str) {
         for (int i = 0; i < str.length() / 2; i++) {
-            if(!String.valueOf(str.charAt(i)).toLowerCase().equals(String.valueOf(str.charAt(str.length() - 1 - i)).toLowerCase())) {
+            if (!String.valueOf(str.charAt(i)).toLowerCase().equals(String.valueOf(str.charAt(str.length() - 1 - i)).toLowerCase())) {
                 return "NO";
             }
         }
@@ -28,7 +28,7 @@ public class Main {
         int lt = 0;
         int rt = str.length() - 1;
         while (lt < rt) {
-            if(!String.valueOf(str.charAt(lt)).toLowerCase().equals(String.valueOf(str.charAt(rt)).toLowerCase())) {
+            if (!String.valueOf(str.charAt(lt)).toLowerCase().equals(String.valueOf(str.charAt(rt)).toLowerCase())) {
                 answer = "NO";
                 break;
             }

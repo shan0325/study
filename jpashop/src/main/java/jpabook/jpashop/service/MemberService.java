@@ -17,8 +17,8 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     /**
-    * 회원 가입
-    */
+     * 회원 가입
+     */
     @Transactional // 기본이 readOnly = false
     public Long join(Member member) {
         validateDuplicateMember(member); //중복 회원 검증
@@ -29,7 +29,7 @@ public class MemberService {
     private void validateDuplicateMember(Member member) {
         //EXCEPTION
         List<Member> findMembers = memberRepository.findByName(member.getName());
-        if(!findMembers.isEmpty()) {
+        if (!findMembers.isEmpty()) {
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         }
     }

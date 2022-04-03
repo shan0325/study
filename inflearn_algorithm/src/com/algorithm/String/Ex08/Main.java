@@ -13,7 +13,7 @@ public class Main {
         String answer = "NO";
         String collect = str.chars().filter(c -> Character.isAlphabetic(c)).mapToObj(c -> Character.toString((char) c)).collect(Collectors.joining());
         String reverseStr = new StringBuilder(collect).reverse().toString();
-        if(collect.equalsIgnoreCase(reverseStr)) {
+        if (collect.equalsIgnoreCase(reverseStr)) {
             answer = "YES";
         }
         return answer;

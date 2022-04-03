@@ -12,13 +12,13 @@ public class Main {
         int rt = str.length() - 1;
 
         while (lt < rt) {
-            if(Character.isAlphabetic(chars[lt]) && Character.isAlphabetic(chars[rt])) {
+            if (Character.isAlphabetic(chars[lt]) && Character.isAlphabetic(chars[rt])) {
                 swap(chars, lt, rt);
                 lt++;
                 rt--;
-            } else if(!Character.isAlphabetic(chars[lt])) {
+            } else if (!Character.isAlphabetic(chars[lt])) {
                 lt++;
-            } else if(!Character.isAlphabetic(chars[rt])) {
+            } else if (!Character.isAlphabetic(chars[rt])) {
                 rt--;
             }
         }

@@ -18,33 +18,33 @@ import static org.hamcrest.Matchers.*;
 @SpringBootTest
 class JpashopApplicationTests {
 
-	@PersistenceUnit
-	private EntityManagerFactory emf;
+    @PersistenceUnit
+    private EntityManagerFactory emf;
 
-	@PersistenceContext
-	private EntityManager em;
+    @PersistenceContext
+    private EntityManager em;
 
-	@PersistenceContext
-	private EntityManager em9;
+    @PersistenceContext
+    private EntityManager em9;
 
-	@Test
-	public void 엔티티매니저_호출시마다_새로운인스턴스리턴() {
-		EntityManager em1 = emf.createEntityManager();
-		EntityManager em2 = emf.createEntityManager();
-		EntityManager em3 = emf.createEntityManager();
+    @Test
+    public void 엔티티매니저_호출시마다_새로운인스턴스리턴() {
+        EntityManager em1 = emf.createEntityManager();
+        EntityManager em2 = emf.createEntityManager();
+        EntityManager em3 = emf.createEntityManager();
 
-		System.out.println(em1);
-		System.out.println(em2);
-		System.out.println(em3);
-		System.out.println(em);
-		System.out.println(em9);
+        System.out.println(em1);
+        System.out.println(em2);
+        System.out.println(em3);
+        System.out.println(em);
+        System.out.println(em9);
 
-		assertThat(em1, is(not(sameInstance(em2))));
-		assertThat(em1, is(not(sameInstance(em3))));
-		assertThat(em, is(not(sameInstance(em1))));
-		assertThat(em, is(not(sameInstance(em2))));
-		assertThat(em, is(not(sameInstance(em3))));
-	}
+        assertThat(em1, is(not(sameInstance(em2))));
+        assertThat(em1, is(not(sameInstance(em3))));
+        assertThat(em, is(not(sameInstance(em1))));
+        assertThat(em, is(not(sameInstance(em2))));
+        assertThat(em, is(not(sameInstance(em3))));
+    }
 
 
 }

@@ -7,7 +7,7 @@ public class Main {
     public String solution(int n, int[] arr) {
         String answer = String.valueOf(arr[0]);
         for (int i = 1; i < arr.length; i++) {
-            if(arr[i - 1] < arr[i]) answer += " " + arr[i];
+            if (arr[i - 1] < arr[i]) answer += " " + arr[i];
         }
         return answer;
     }

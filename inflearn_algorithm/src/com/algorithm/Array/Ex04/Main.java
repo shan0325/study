@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public int recursive(int depth, int n, int num, int num2) {
         System.out.print(num2 + " ");
-        if(depth == n) return num2;
+        if (depth == n) return num2;
         return recursive(depth + 1, n, num2, num + num2);
     }
 

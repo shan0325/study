@@ -14,15 +14,15 @@ import java.util.UUID;
 @SpringBootApplication
 public class DataJpaApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DataJpaApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DataJpaApplication.class, args);
+    }
 
-	@Bean
-	public AuditorAware<String> auditorProvider() {
-		// 실제에서는 시큐리티나 세션에서 유저 아이디를 꺼내서 넣음
-		return () -> Optional.of(UUID.randomUUID().toString());
-	}
+    @Bean
+    public AuditorAware<String> auditorProvider() {
+        // 실제에서는 시큐리티나 세션에서 유저 아이디를 꺼내서 넣음
+        return () -> Optional.of(UUID.randomUUID().toString());
+    }
 
 
 }

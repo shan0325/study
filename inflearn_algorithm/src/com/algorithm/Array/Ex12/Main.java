@@ -18,8 +18,8 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             boolean isFinded = false;
             for (int j = 0; j < arr[i].length; j++) {
-                if(!isFinded) check[arr[i][j] - 1] = false;
-                if(arr[i][j] == target) isFinded = true;
+                if (!isFinded) check[arr[i][j] - 1] = false;
+                if (arr[i][j] == target) isFinded = true;
             }
         }
         return (int) Arrays.stream(check).filter(b -> b).count();

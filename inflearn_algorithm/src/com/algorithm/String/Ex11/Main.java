@@ -8,7 +8,7 @@ public class Main {
         int su = 1;
         char beforeChar = s.charAt(0);
         for (int i = 1; i < s.toCharArray().length; i++) {
-            if(beforeChar != s.charAt(i)) {
+            if (beforeChar != s.charAt(i)) {
                 answer += su > 1 ? String.valueOf(beforeChar) + su : String.valueOf(beforeChar);
                 su = 0;
             }
@@ -24,9 +24,9 @@ public class Main {
         s += " ";
         int su = 1;
         for (int i = 0; i < s.length() - 1; i++) {
-            if(s.charAt(i) != s.charAt(i + 1)) {
+            if (s.charAt(i) != s.charAt(i + 1)) {
                 answer += s.charAt(i);
-                if(su > 1) {
+                if (su > 1) {
                     answer += su;
                 }
                 su = 1;

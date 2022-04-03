@@ -17,23 +17,23 @@ import static org.assertj.core.api.Assertions.*;
 @Transactional
 class QuerydslApplicationTests {
 
-	@PersistenceContext
-	private EntityManager em;
+    @PersistenceContext
+    private EntityManager em;
 
-	@Test
-	void contextLoads() {
-		Hello hello = new Hello();
-		em.persist(hello);
+    @Test
+    void contextLoads() {
+        Hello hello = new Hello();
+        em.persist(hello);
 
-		JPAQueryFactory query = new JPAQueryFactory(em);
-		QHello qHello = QHello.hello;
+        JPAQueryFactory query = new JPAQueryFactory(em);
+        QHello qHello = QHello.hello;
 
-		Hello result = query
-				.selectFrom(qHello)
-				.fetchOne();
+        Hello result = query
+                .selectFrom(qHello)
+                .fetchOne();
 
-		assertThat(result).isEqualTo(hello);
-		assertThat(result.getId()).isEqualTo(hello.getId());
-	}
+        assertThat(result).isEqualTo(hello);
+        assertThat(result.getId()).isEqualTo(hello.getId());
+    }
 
 }

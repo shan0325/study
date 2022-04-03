@@ -8,9 +8,9 @@ import java.util.stream.IntStream;
 public class Main {
     public int solution(String str) {
         String number = str.chars()
-                            .filter(i -> !Character.isAlphabetic(i))
-                            .mapToObj(i -> Character.toString((char) i))
-                            .collect(Collectors.joining());
+                .filter(i -> !Character.isAlphabetic(i))
+                .mapToObj(i -> Character.toString((char) i))
+                .collect(Collectors.joining());
         return Integer.parseInt(number);
     }
 

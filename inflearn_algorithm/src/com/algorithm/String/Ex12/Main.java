@@ -9,7 +9,7 @@ public class Main {
 
         s = s.replaceAll("\\*", "0").replaceAll("#", "1");
         for (int i = 0; i < s.length(); i++) {
-            if((i + 1) % 7 == 0) {
+            if ((i + 1) % 7 == 0) {
                 answer += (char) Integer.valueOf(temp + s.charAt(i), 2).intValue();
                 temp = "";
             } else {

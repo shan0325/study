@@ -12,9 +12,9 @@ public class Main {
 
         for (int i = 0; i < s.length(); i++) {
             for (int j = 0; j < s.length(); j++) {
-                if(s.charAt(j) == t) {
+                if (s.charAt(j) == t) {
                     int num = Math.abs(i - j);
-                    if(numbers[i] > num) {
+                    if (numbers[i] > num) {
                         numbers[i] = num;
                     }
                 }
@@ -29,7 +29,7 @@ public class Main {
         int p = 1000;
 
         for (int i = 0; i < s.length(); i++) {
-            if(s.charAt(i) == t) {
+            if (s.charAt(i) == t) {
                 p = 0;
                 numbers[i] = 0;
             } else {
@@ -39,8 +39,8 @@ public class Main {
         }
 
         p = 1000;
-        for(int i = s.length() - 1; i >= 0; i--) {
-            if(s.charAt(i) == t) {
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == t) {
                 p = 0;
             } else {
                 p++;

@@ -9,10 +9,10 @@ public class Main {
         int index = 0;
         int index2 = 0;
         int index3 = 0;
-        while(index3 < arr.length + arr2.length) {
+        while (index3 < arr.length + arr2.length) {
             int n = index < arr.length ? arr[index] : Integer.MAX_VALUE;
             int n2 = index2 < arr2.length ? arr2[index2] : Integer.MAX_VALUE;
-            if(n < n2) {
+            if (n < n2) {
                 answer += n + " ";
                 index++;
             } else {

@@ -10,13 +10,13 @@ public class Main {
         List<String> answer = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             String result = "";
-            if(aArr[i] == bArr[i]) {
+            if (aArr[i] == bArr[i]) {
                 result = "D";
-            } else if(aArr[i] == 1) {
+            } else if (aArr[i] == 1) {
                 result = bArr[i] == 2 ? "B" : "A";
-            } else if(aArr[i] == 2) {
+            } else if (aArr[i] == 2) {
                 result = bArr[i] == 3 ? "B" : "A";
-            } else if(aArr[i] == 3) {
+            } else if (aArr[i] == 3) {
                 result = bArr[i] == 1 ? "B" : "A";
             }
             answer.add(result);
@@ -28,13 +28,13 @@ public class Main {
         List<String> answer = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             String result = "";
-            if(aArr[i] == bArr[i]) {
+            if (aArr[i] == bArr[i]) {
                 result = "D";
-            } else if(aArr[i] == 1 && bArr[i] == 3) {
+            } else if (aArr[i] == 1 && bArr[i] == 3) {
                 result = "A";
-            } else if(aArr[i] == 2 && bArr[i] == 1) {
+            } else if (aArr[i] == 2 && bArr[i] == 1) {
                 result = "A";
-            } else if(aArr[i] == 3 && bArr[i] == 2) {
+            } else if (aArr[i] == 3 && bArr[i] == 2) {
                 result = "A";
             } else {
                 result = "B";

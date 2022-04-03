@@ -7,7 +7,7 @@ public class Main {
         String result = "";
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if(Character.isLowerCase(c)) {
+            if (Character.isLowerCase(c)) {
                 result += Character.toUpperCase(c);
             } else {
                 result += Character.toLowerCase(c);

@@ -12,7 +12,7 @@ public class Main {
 
         int count = 0;
         for (Character c : next1.toCharArray()) {
-            if(c.toString().toLowerCase().equals(next2.toLowerCase()))
+            if (c.toString().toLowerCase().equals(next2.toLowerCase()))
                 count++;
         }
 
